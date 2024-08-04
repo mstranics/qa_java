@@ -26,7 +26,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getFamilyReturnCorrectValue() throws Exception {
+    public void getFamilyReturnCorrectValue()  {
         Feline feline = new Feline();
         String expectedFamily = "Кошачьи";
         String actualFamily = feline.getFamily();
