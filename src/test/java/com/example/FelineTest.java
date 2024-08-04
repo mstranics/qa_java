@@ -30,7 +30,7 @@ public class FelineTest {
         Feline feline = new Feline();
         String expectedFamily = "Кошачьи";
         String actualFamily = feline.getFamily();
-        assertEquals(expectedFamily, actualFamily);
+        assertEquals("возвращаемое семейство не совпадает",expectedFamily, actualFamily);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class FelineTest {
         Mockito.when(felineSpy.getKittens(1)).thenReturn(1);
         int expectedKittensNoParam = 1;
         int actualGetKittensNoParam = felineSpy.getKittens();
-        assertEquals(expectedKittensNoParam, actualGetKittensNoParam);
+        assertEquals("кол-во котят не совпадает",expectedKittensNoParam, actualGetKittensNoParam);
 
     }
 
@@ -49,7 +49,7 @@ public class FelineTest {
         int randomNumber = random.nextInt(100);
         int expectedKittensParam = randomNumber;
         int actualGetKittensParam = feline.getKittens(randomNumber);
-        assertEquals(expectedKittensParam, actualGetKittensParam);
+        assertEquals("кол-во котят не совпадает",expectedKittensParam, actualGetKittensParam);
 
     }
 

@@ -33,7 +33,7 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(1);
         int expectedGetKittens = 1;
         int actualGetKittens = lion.getKittens();
-        assertEquals(expectedGetKittens, actualGetKittens);
+        assertEquals("кол-во котят не совпадает",expectedGetKittens, actualGetKittens);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> expectedFoodList = List.of("Животные", "Птицы", "Рыба");
         List<String> actualFoodList = lion.getFood();
-        assertEquals(expectedFoodList, actualFoodList);
+        assertEquals("список еды не соответствует",expectedFoodList, actualFoodList);
     }
 
     @Test
@@ -51,6 +51,6 @@ public class LionTest {
             Lion lion = new Lion("несуществующий пол");
 
         });
-        assertEquals(ex.getMessage(), "Используйте допустимые значения пола животного - самей или самка");
+        assertEquals("тест ошибки не совпадает",ex.getMessage(), "Используйте допустимые значения пола животного - самей или самка");
     }
 }

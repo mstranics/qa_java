@@ -35,7 +35,7 @@ public class CatTest {
     public void getSoundReturnsCorrectSound() {
         String expectedSound = "Мяу";
         String actualSound = cat.getSound();
-        assertEquals(expectedSound, actualSound);
+        assertEquals("издаваемый звук не совпадает",expectedSound, actualSound);
     }
 
 }

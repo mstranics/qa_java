@@ -34,7 +34,7 @@ private final Boolean expected;
 public void hasManeReturnsCorrectValue() throws Exception {
     Lion lion = new Lion(sex);
     boolean actualHasMane=lion.doesHaveMane();
-    assertEquals(expected,actualHasMane);
+    assertEquals("не совпадает есть ли грива или нет",expected,actualHasMane);
 }
 
 
